@@ -6,7 +6,7 @@ while(isNaN(a))
 
 }
 
-let b = prompt("Antre premye nonm");
+let b = prompt("Antre dezyem nonm");
 while(isNaN(a))
 {
     b = prompt("Ou sipoze antre on nonm");
