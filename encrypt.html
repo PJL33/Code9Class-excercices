@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kripte</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <main>
+
+        </main>
+
+        <script>
+            let alfabe = "abcdefghijklmnopqrstuvwxyz",a,txt = "",c,d;
+            let tabAlfabe = alfabe.split("");
+            let test = ">3A >0A <1U <10K >1A <9J <0S <16U";
+            let testSplit = test.split(" ");
+            for(el of testSplit)
+            {
+                let b = el.split("")
+                if(b[0] == ">")
+                {
+                    c = el.split(">")
+                    d = parseInt(c[1]);
+                    a = parseInt(tabAlfabe.indexOf(b.at(-1).toLowerCase())) + d;
+                    txt += tabAlfabe[a].toUpperCase();
+                }
+                else
+                {
+                    c = el.split("<")
+                    d = parseInt(c[1]);
+                    a = parseInt(tabAlfabe.indexOf(b.at(-1).toLowerCase())) - d;
+                    txt += tabAlfabe[a].toUpperCase();
+                }
+            }
+            console.log(test,":",txt)
+            
+        </script>
+    </body>
+</html>
